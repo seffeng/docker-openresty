@@ -2,7 +2,7 @@
 
 # 版本说明
 
-* [1.17](https://github.com/seffeng/docker-openresty/tree/1.17)
+* [1.17](https://github.com/seffeng/docker-openresty)
 
 
 ## 环境
