@@ -9,8 +9,8 @@ ENV NGINX_VERSION=openresty-1.17.8.2\
  ZLIB_VERSION="zlib-1.2.11"\
  CONFIG_DIR="${BASE_DIR}/config"\
  INSTALL_DIR=${BASE_DIR}/program/openresty\
- BASE_PACKAGE="gcc g++ make perl"\
- EXTEND="postgresql-dev"\
+ BASE_PACKAGE="gcc g++ make postgresql-dev file"\
+ EXTEND="libgcc libpq perl"\
  WWWROOT_DIR="${BASE_DIR}/data/wwwroot"
 
 ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
@@ -26,6 +26,7 @@ ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  --prefix=${INSTALL_DIR}\
  --sbin-path=${INSTALL_DIR}/sbin/nginx\
  --user=www\
+ --with-ipv6\
  --with-http_addition_module\
  --with-http_dav_module\
  --with-http_degradation_module\
@@ -44,6 +45,7 @@ ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  --with-mail\
  --with-mail_ssl_module\
  --with-pcre=/tmp/${PCRE_VERSION}\
+ --with-pcre-jit\
  --with-stream_realip_module\
  --with-stream_ssl_module\
  --without-http_redis2_module\
