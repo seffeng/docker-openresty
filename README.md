@@ -2,8 +2,9 @@
 
 # 版本说明
 
-* [1.17](https://github.com/seffeng/docker-openresty)
+* [1.19.3.1](https://github.com/seffeng/docker-openresty), [latest](https://github.com/seffeng/docker-openresty)
 
+* [1.17.8.2](https://github.com/seffeng/docker-openresty/tree/1.17)
 
 ## 环境
 
@@ -16,13 +17,13 @@ openresty: ^1.17
 
 ```sh
 # 拉取镜像
-$ docker pull seffeng/openresty
+$ docker pull seffeng/openresty:1.17
 
 # 运行；若配合 php 使用，注意 <html-dir> 和 <tmp-dir> 与 php 一致
-$ docker run --name nginx-test -d -p 80:80 -p 443:443 -v <html-dir>:/opt/websrv/data/wwwroot -v <conf-dir>:/opt/websrv/config/nginx/conf.d -v <cert-dir>:/opt/websrv/config/nginx/certs.d -v <log-dir>:/opt/websrv/logs -v <tmp-dir>:/opt/websrv/tmp seffeng/openresty
+$ docker run --name nginx-test -d -p 80:80 -p 443:443 -v <html-dir>:/opt/websrv/data/wwwroot -v <conf-dir>:/opt/websrv/config/nginx/conf.d -v <cert-dir>:/opt/websrv/config/nginx/certs.d -v <log-dir>:/opt/websrv/logs -v <tmp-dir>:/opt/websrv/tmp seffeng/openresty:1.17
 
 # 例子：
-$ docker run --name nginx-alias1 -d -p 80:80 -p 443:443 -v /srv/websrv/data/wwwroot:/opt/websrv/data/wwwroot -v /srv/websrv/config/nginx/conf.d:/opt/websrv/config/nginx/conf.d -v /srv/websrv/config/nginx/certs.d:/opt/websrv/config/nginx/certs.d -v /srv/websrv/logs/nginx:/opt/websrv/logs -v /srv/websrv/tmp:/opt/websrv/tmp seffeng/openresty
+$ docker run --name nginx-alias1 -d -p 80:80 -p 443:443 -v /opt/websrv/data/wwwroot:/opt/websrv/data/wwwroot -v /opt/websrv/config/nginx/conf.d:/opt/websrv/config/nginx/conf.d -v /opt/websrv/config/nginx/certs.d:/opt/websrv/config/nginx/certs.d -v /opt/websrv/logs/nginx:/opt/websrv/logs -v /opt/websrv/tmp:/opt/websrv/tmp seffeng/openresty:1.17
 
 # 查看正在运行的容器
 $ docker ps
@@ -69,5 +70,5 @@ fastcgi_pass: #配合docker seffeng/php:版本（7.4-unix_php74_fpm, 7.3-unix_ph
 $ docker network create network-01
 
 ## 运行容器增加 --network network-01 --network-alias [name-net-alias]
-$ docker run --name nginx-alias1 --network network-01 --network-alias nginx-net1 -d -p 80:80 -p 443:443 -v /srv/websrv/data/wwwroot:/opt/websrv/data/wwwroot -v /srv/websrv/config/nginx/conf.d:/opt/websrv/config/nginx/conf.d -v /srv/websrv/config/nginx/certs.d:/opt/websrv/config/nginx/certs.d -v /srv/websrv/logs/nginx:/opt/websrv/logs -v /srv/websrv/tmp:/opt/websrv/tmp seffeng/openresty
+$ docker run --name nginx-alias1 --network network-01 --network-alias nginx-net1 -d -p 80:80 -p 443:443 -v /opt/websrv/data/wwwroot:/opt/websrv/data/wwwroot -v /opt/websrv/config/nginx/conf.d:/opt/websrv/config/nginx/conf.d -v /opt/websrv/config/nginx/certs.d:/opt/websrv/config/nginx/certs.d -v /opt/websrv/logs/nginx:/opt/websrv/logs -v /opt/websrv/tmp:/opt/websrv/tmp seffeng/openresty:1.17
 ```
