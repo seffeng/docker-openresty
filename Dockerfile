@@ -15,7 +15,7 @@ ENV NGINX_VERSION=openresty-1.19.3.1\
 
 ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  PCRE_URL="https://ftp.pcre.org/pub/pcre/${PCRE_VERSION}.tar.gz"\
- ZLIB_URL="http://zlib.net/${ZLIB_VERSION}.tar.gz"\
+ ZLIB_URL="https://zlib.net/${ZLIB_VERSION}.tar.gz"\
  CONFIGURE="./configure\
  --conf-path=${CONFIG_DIR}/nginx/nginx.conf\
  --error-log-path=${BASE_DIR}/logs/error.log\
