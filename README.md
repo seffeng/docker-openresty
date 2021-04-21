@@ -9,7 +9,7 @@
 ## 环境
 
 ```
-alpine: ^3.12
+alpine: ^3.13
 openresty: ^1.19
 ```
 
