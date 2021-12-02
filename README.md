@@ -2,14 +2,14 @@
 
 ## 版本说明
 
-* [1.19.3.1](https://github.com/seffeng/docker-openresty), [latest](https://github.com/seffeng/docker-openresty)
+* [1.19.3.2](https://github.com/seffeng/docker-openresty), [latest](https://github.com/seffeng/docker-openresty)
 
 * [1.17.8.2](https://github.com/seffeng/docker-openresty/tree/1.17)
 
 ## 环境
 
 ```
-alpine: ^3.13
+alpine: ^3.15
 openresty: ^1.19
 ```
 
