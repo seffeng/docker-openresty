@@ -13,6 +13,8 @@ ENV NGINX_VERSION=openresty-1.17.8.2\
  EXTEND="libgcc libpq perl"\
  WWWROOT_DIR="${BASE_DIR}/data/wwwroot"
 
+ENV PCRE_VERSION="pcre-${PCRE_VERSION_NUMBER}"
+
 ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  PCRE_URL="https://udomain.dl.sourceforge.net/project/pcre/pcre/${PCRE_VERSION_NUMBER}/${PCRE_VERSION}.tar.gz"\
  ZLIB_URL="https://zlib.net/${ZLIB_VERSION}.tar.gz"\
