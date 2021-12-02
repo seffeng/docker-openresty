@@ -5,7 +5,7 @@ MAINTAINER  seffeng "seffeng@sina.cn"
 ARG BASE_DIR="/opt/websrv"
 
 ENV NGINX_VERSION=openresty-1.17.8.2\
- PCRE_VERSION="pcre-8.44"\
+ PCRE_VERSION_NUMBER="8.45"\
  ZLIB_VERSION="zlib-1.2.11"\
  CONFIG_DIR="${BASE_DIR}/config"\
  INSTALL_DIR=${BASE_DIR}/program/openresty\
@@ -14,8 +14,8 @@ ENV NGINX_VERSION=openresty-1.17.8.2\
  WWWROOT_DIR="${BASE_DIR}/data/wwwroot"
 
 ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
- PCRE_URL="https://ftp.pcre.org/pub/pcre/${PCRE_VERSION}.tar.gz"\
- ZLIB_URL="http://zlib.net/${ZLIB_VERSION}.tar.gz"\
+ PCRE_URL="https://udomain.dl.sourceforge.net/project/pcre/pcre/${PCRE_VERSION_NUMBER}/${PCRE_VERSION}.tar.gz"\
+ ZLIB_URL="https://zlib.net/${ZLIB_VERSION}.tar.gz"\
  CONFIGURE="./configure\
  --conf-path=${CONFIG_DIR}/nginx/nginx.conf\
  --error-log-path=${BASE_DIR}/logs/error.log\
