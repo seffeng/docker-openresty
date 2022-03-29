@@ -6,7 +6,7 @@ ARG BASE_DIR="/opt/websrv"
 
 ENV NGINX_VERSION=openresty-1.17.8.2\
  PCRE_VERSION_NUMBER="8.45"\
- ZLIB_VERSION="zlib-1.2.11"\
+ ZLIB_VERSION="zlib-1.2.12"\
  CONFIG_DIR="${BASE_DIR}/config"\
  INSTALL_DIR=${BASE_DIR}/program/openresty\
  BASE_PACKAGE="gcc g++ make postgresql-dev file"\
