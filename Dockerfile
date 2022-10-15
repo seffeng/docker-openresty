@@ -50,8 +50,8 @@ ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  --with-pcre=/tmp/${PCRE_VERSION}\
  --with-stream_realip_module\
  --with-stream_ssl_module\
- --with-zlib=/tmp/${ZLIB_VERSION}"
- --without-http_redis2_module\
+ --with-zlib=/tmp/${ZLIB_VERSION}"\
+ --without-http_redis2_module
 
 WORKDIR /tmp
 COPY    conf ./conf
