@@ -28,6 +28,7 @@ ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  --lock-path=${BASE_DIR}/tmp/nginx.lock\
  --pid-path=${BASE_DIR}/tmp/nginx.pid\
  --sbin-path=${INSTALL_DIR}/sbin/nginx\
+ --without-http_redis2_module\
  --with-http_addition_module\
  --with-http_dav_module\
  --with-http_degradation_module\
@@ -50,8 +51,7 @@ ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  --with-pcre=/tmp/${PCRE_VERSION}\
  --with-stream_realip_module\
  --with-stream_ssl_module\
- --with-zlib=/tmp/${ZLIB_VERSION}"\
- --without-http_redis2_module
+ --with-zlib=/tmp/${ZLIB_VERSION}"
 
 WORKDIR /tmp
 COPY    conf ./conf
