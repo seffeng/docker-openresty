@@ -2,8 +2,8 @@
 
 ## 版本
 
-* [1.21.4.1](https://github.com/seffeng/docker-openresty/tree/1.21)
-* [1.19.9.1 , latest](https://github.com/seffeng/docker-openresty/tree/1.19)
+* [1.21.4.1 , latest](https://github.com/seffeng/docker-openresty/tree/1.21)
+* [1.19.9.1](https://github.com/seffeng/docker-openresty/tree/1.19)
 * [1.17.8.2](https://github.com/seffeng/docker-openresty/tree/1.17)
 
 ## 常用命令：
