@@ -1,4 +1,4 @@
-FROM seffeng/alpine:latest
+FROM seffeng/alpine:3.16
 
 LABEL author="zxf <seffeng@live.com>"
 
@@ -38,10 +38,11 @@ ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  --with-http_random_index_module\
  --with-http_realip_module\
  --with-http_secure_link_module\
+ --with-http_slice_module\
  --with-http_ssl_module\
  --with-http_stub_status_module\
  --with-http_sub_module\
- --with-ipv6\
+ --with-http_v2_module\
  --with-luajit\
  --with-mail\
  --with-mail_ssl_module\
