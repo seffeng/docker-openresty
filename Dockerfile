@@ -1,4 +1,4 @@
-FROM seffeng/alpine:latest
+FROM seffeng/alpine:3.16
 
 LABEL author="zxf <seffeng@live.com>"
 
@@ -19,13 +19,13 @@ ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  ZLIB_URL="https://zlib.net/${ZLIB_VERSION}.tar.gz"\
  CONFIGURE="./configure\
  --user=www\
+ --group=wwww\
+ --prefix=${INSTALL_DIR}\
  --conf-path=${CONFIG_DIR}/nginx/nginx.conf\
  --error-log-path=${BASE_DIR}/logs/error.log\
- --group=wwww\
  --http-log-path=${BASE_DIR}/logs/access.log\
  --lock-path=${BASE_DIR}/tmp/nginx.lock\
  --pid-path=${BASE_DIR}/tmp/nginx.pid\
- --prefix=${INSTALL_DIR}\
  --sbin-path=${INSTALL_DIR}/sbin/nginx\
  --with-http_addition_module\
  --with-http_dav_module\
@@ -38,10 +38,11 @@ ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  --with-http_random_index_module\
  --with-http_realip_module\
  --with-http_secure_link_module\
+ --with-http_slice_module\
  --with-http_ssl_module\
  --with-http_stub_status_module\
  --with-http_sub_module\
- --with-ipv6\
+ --with-http_v2_module\
  --with-luajit\
  --with-mail\
  --with-mail_ssl_module\
