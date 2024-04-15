@@ -5,7 +5,7 @@ LABEL author="zxf <seffeng@live.com>"
 ARG BASE_DIR="/opt/websrv"
 ARG NGINX_VERSION="openresty-1.21.4.3"
 ARG PCRE_VERSION_NUMBER="8.45"
-ARG ZLIB_VERSION="zlib-1.2.13"
+ARG ZLIB_VERSION="zlib-1.3.1"
 
 ENV PCRE_VERSION="pcre-${PCRE_VERSION_NUMBER}"\
  CONFIG_DIR="${BASE_DIR}/config"\
