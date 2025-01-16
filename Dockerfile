@@ -3,7 +3,7 @@ FROM seffeng/alpine:3.19
 LABEL author="zxf <seffeng@live.com>"
 
 ARG BASE_DIR="/opt/websrv"
-ARG NGINX_VERSION="openresty-1.25.3.1"
+ARG NGINX_VERSION="openresty-1.25.3.2"
 ARG PCRE_VERSION_NUMBER="8.45"
 ARG ZLIB_VERSION="zlib-1.3.1"
 
@@ -15,7 +15,7 @@ ENV PCRE_VERSION="pcre-${PCRE_VERSION_NUMBER}"\
  WWWROOT_DIR="${BASE_DIR}/data/wwwroot"
 
 ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
- PCRE_URL="https://udomain.dl.sourceforge.net/project/pcre/pcre/${PCRE_VERSION_NUMBER}/${PCRE_VERSION}.tar.gz"\
+ PCRE_URL="https://zenlayer.dl.sourceforge.net/project/pcre/pcre/${PCRE_VERSION_NUMBER}/${PCRE_VERSION}.tar.gz?viasf=1"\
  ZLIB_URL="https://zlib.net/${ZLIB_VERSION}.tar.gz"\
  CONFIGURE="./configure\
  --user=www\
@@ -66,7 +66,7 @@ RUN \
  # download files
  ############################################################
  wget ${NGINX_URL} &&\
- wget ${PCRE_URL} &&\
+ wget -O ${PCRE_VERSION}.tar.gz ${PCRE_URL} &&\
  wget ${ZLIB_URL} &&\
  tar -zxf ${NGINX_VERSION}.tar.gz &&\
  tar -zxf ${PCRE_VERSION}.tar.gz &&\
