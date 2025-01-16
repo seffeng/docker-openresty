@@ -2,7 +2,7 @@
 
 ## 版本
 
-* [1.25](https://github.com/seffeng/docker-openresty/tree/1.25)
+* [1.27](https://github.com/seffeng/docker-openresty/tree/1.27)
 
 ## 常用命令：
 
