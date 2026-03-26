@@ -2,7 +2,8 @@
 
 ## 版本
 
-* [1.27 , 1.27.1.1 , latest](https://github.com/seffeng/docker-openresty/tree/1.27)
+* [1.29 , 1.29.2.3 , latest](https://github.com/seffeng/docker-openresty/tree/1.29)
+* [1.27 , 1.27.1.2](https://github.com/seffeng/docker-openresty/tree/1.27)
 * [1.25 , 1.25.3.2](https://github.com/seffeng/docker-openresty/tree/1.25)
 * [1.21 , 1.21.4.3](https://github.com/seffeng/docker-openresty/tree/1.21)
 * [1.19 , 1.19.9.1](https://github.com/seffeng/docker-openresty/tree/1.19)
