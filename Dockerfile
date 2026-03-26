@@ -10,13 +10,13 @@ ARG ZLIB_VERSION="zlib-1.3.2"
 ENV PCRE_VERSION="pcre-${PCRE_VERSION_NUMBER}"\
  CONFIG_DIR="${BASE_DIR}/config"\
  INSTALL_DIR="${BASE_DIR}/program/openresty"\
- BASE_PACKAGE="gcc g++ make postgresql-dev file"\
+ BASE_PACKAGE="gcc g++ make postgresql-dev file linux-headers"\
  EXTEND="libgcc libpq perl"\
  WWWROOT_DIR="${BASE_DIR}/data/wwwroot"
 
 ENV NGINX_URL="https://openresty.org/download/${NGINX_VERSION}.tar.gz"\
  PCRE_URL="https://zenlayer.dl.sourceforge.net/project/pcre/pcre/${PCRE_VERSION_NUMBER}/${PCRE_VERSION}.tar.gz?viasf=1"\
- ZLIB_URL="https://zlib.net/${ZLIB_VERSION}.tar.gz"\
+ ZLIB_URL="https://www.zlib.net/${ZLIB_VERSION}.tar.gz"\
  CONFIGURE="./configure\
  --user=www\
  --group=wwww\
